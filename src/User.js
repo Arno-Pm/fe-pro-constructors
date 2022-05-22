@@ -10,4 +10,25 @@ import { Book } from './Book.js';
  * @property {User[]} friends
  * @property {Book[]} likes
  */
-export function User(name, date) {}
+export function User(name, date) {
+  this.name = name;
+  this.date = date;
+  this.myBooks = [];
+  this.friends = [];
+  this.likes = [];
+
+
+  this.addToFriends = function(friend){
+    if(this.friends.includes(friend.name, 0)){
+      this.friends = this.friends.filter((friend) => friend !== friend.name)
+
+    }
+    else {
+      this.friends.push(friend.name);
+      friend.friends.push()
+    }
+
+  }
+
+}
+
